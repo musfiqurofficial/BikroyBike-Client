@@ -7,6 +7,7 @@ import HomeGetNTouch from './HomeGetNTouch';
 const Home = () => {
     return (
         <div>
+            {/* HeroArea */}
             <div><HeroArea></HeroArea></div>
             <div><CategoryProduct></CategoryProduct></div>
             <div><HomeTerms></HomeTerms></div>
