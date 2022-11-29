@@ -1,0 +1,22 @@
+[
+    {
+        "category": "101",
+        "brand_Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Suzuki_logo_2.svg/2560px-Suzuki_logo_2.svg.png",
+        "brand_name": "SUZUKI"
+    },
+    {
+        "category": "102",
+        "brand_Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/2560px-Honda.svg.png",
+        "brand_name": "HONDA"
+    },
+    {
+        "category": "103",
+        "brand_Logo": "http://global.yamaha-motor.com/img/ogp_img.png",
+        "brand_name": "YAMAHA"
+    },
+    {
+        "category": "104",
+        "brand_Logo": "https://1000logos.net/wp-content/uploads/2020/07/TVS-Motor-Logo.jpg",
+        "brand_name": "TVS"
+    }
+]
