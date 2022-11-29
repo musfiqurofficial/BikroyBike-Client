@@ -21,11 +21,13 @@ import AllUser from "../dashboard/AllUser";
 import Payment from "../dashboard/Payment";
 import Orders from "../components/pages/myOrder/Orders";
 import AddDoctor from "../dashboard/AddDoctor";
+import ErrorPage from "../error/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>
         children: [
             {
                 path: '/',
