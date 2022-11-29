@@ -18,6 +18,7 @@ const DashboardLayout = () => {
                 <div className="drawer drawer-mobile">
                     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content w-11/12 mx-auto ">
+                        {/* Outlet */}
                         <Outlet></Outlet>
                     </div>
                     <div className="drawer-side shadow-xl">
