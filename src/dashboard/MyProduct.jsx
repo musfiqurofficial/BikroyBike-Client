@@ -17,13 +17,13 @@ const MyProducts = () => {
     const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/myproducts?email=${user?.email}`)
+            const res = await fetch(`https://assingment-12-server.vercel.app/myproducts?email=${user?.email}`)
             const data = await res.json();
             return data;
         }
     });
     const handleDeleteProduct = product => {
-        fetch(`http://localhost:5000/products/${product._id}`, {
+        fetch(`https://assingment-12-server.vercel.app/products/${product._id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -65,11 +65,11 @@ const MyProducts = () => {
 
                                 <th>{i + 1}</th>
                                 <th><img className='w-20 rounded-full' src={product.image} alt="" srcset="" /></th>
-                                <th>{product.phoneName}</th>
-                                <th>{product.resalePrice}</th>
-                                <th>{product.published_date}</th>
-                                <th>{product.use}</th>
-                                <th>{product.condition}</th>
+                                <th>{product.brand_name} {product.model_name}</th>
+                                <th>{product.price}</th>
+                                <th>{product.Post_date}</th>
+                                <th>{product.used_year}</th>
+                                <th>{product.phone_number}</th>
                                 <td>
                                     <label onClick={() => setDeletingProduct(product)} htmlFor="confirmation-modal" className="btn btn-sm btn-error">Delete</label>
                                 </td>

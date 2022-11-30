@@ -45,22 +45,11 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-    //         console.log('User Observing');
-    //         setUser(currentUser);
-    //         setLoading(false)
-    //     });
-    //     return () => unsubscribe();
-    // }, [])
-
     useEffect(() => {
-
-        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser)
-            console.log(currentUser);
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log('User Observing');
             if (currentUser) {
-                fetch(`http://localhost:5000/user?email=${currentUser.email}`)
+                fetch(`https://assingment-12-server.vercel.app/user?email=${currentUser.email}`)
                     .then(res => res.json())
                     .then(data => {
                         data.uid = currentUser.uid
@@ -69,13 +58,34 @@ const AuthProvider = ({ children }) => {
                         setLoading(false);
                     })
             }
-            else {
-                // setUser(null)
-                setLoading(false);
-            }
-        })
-        return () => unSubscribe();
+            setUser(currentUser);
+            setLoading(false)
+        });
+        return () => unsubscribe();
     }, [])
+
+    // useEffect(() => {
+
+    //     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+    //         setUser(currentUser)
+    //         console.log(currentUser);
+    //         if (currentUser) {
+    //             fetch(`https://assingment-12-server.vercel.app/user?email=${currentUser.email}`)
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     data.uid = currentUser.uid
+    //                     setUser(data)
+
+    //                     setLoading(false);
+    //                 })
+    //         }
+    //         else {
+    //             setUser(null)
+    //             setLoading(false);
+    //         }
+    //     })
+    //     return () => unSubscribe();
+    // }, [])
 
 
 

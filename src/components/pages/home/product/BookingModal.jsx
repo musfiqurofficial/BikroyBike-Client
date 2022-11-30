@@ -5,7 +5,7 @@ import { AuthContext } from '../../../../context/AuthProvider';
 
 const BookingModal = ({ data, productDetail, setProductDetail }) => {
     const { user } = useContext(AuthContext);
-    const { _id, product_img, brand_name, detail, model_name, model_year, category, Post_date, Post_time, address, km, cc, price, used_year, seller } = data;
+    const { __id, product_img1, product_img2, product_img3, brand_name, detail, model_name, model_year, category, Post_date, address, km, cc, price, used_year, phone_number, seller_name } = data;
 
     const handleBookingSubmit = e => {
         e.preventDefault();
@@ -32,7 +32,7 @@ const BookingModal = ({ data, productDetail, setProductDetail }) => {
         }
         console.log(booking);
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://assingment-12-server.vercel.app/booking', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -67,9 +67,9 @@ const BookingModal = ({ data, productDetail, setProductDetail }) => {
 
                             <label className='mt-3'>Seller Info:</label>
                             <div className='grid grid-cols-2 gap-3'>
-                                <input type="text" name='seller_name' defaultValue={seller.seller_name} className="input input-sm w-full border-secondary" readOnly disabled required />
+                                <input type="text" name='seller_name' defaultValue={seller_name} className="input input-sm w-full border-secondary" readOnly disabled required />
                                 <input type="text" name='category' defaultValue={category} className="input input-sm w-full border-secondary" readOnly disabled required />
-                                <input type="text" name='seller_phone' defaultValue={seller.phone_number} className="input input-sm w-full border-secondary" readOnly disabled required />
+                                <input type="text" name='seller_phone' defaultValue={phone_number} className="input input-sm w-full border-secondary" readOnly disabled required />
                                 <input type="text" name='price' defaultValue={price} className="input input-sm w-full border-secondary" readOnly disabled required />
                             </div>
                             <label className=''>Meetup Location!</label>

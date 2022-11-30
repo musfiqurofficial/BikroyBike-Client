@@ -53,7 +53,7 @@ const Register = () => {
 
     const saveUser = (name, email, category, url) => {
         const user = { name, email, category, url };
-        fetch('http://localhost:5000/users', {
+        fetch('https://assingment-12-server.vercel.app/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

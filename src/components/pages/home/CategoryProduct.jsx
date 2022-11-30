@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CategoryProduct = () => {
     const { data: categories = [], isLoading } = useQuery({
         queryKey: ['categories'],
-        queryFn: () => fetch('http://localhost:5000/categories')
+        queryFn: () => fetch('https://assingment-12-server.vercel.app/categories')
             .then(res => res.json())
     })
     console.log(categories)

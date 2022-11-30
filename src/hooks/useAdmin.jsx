@@ -2,15 +2,15 @@ import { useEffect, useState } from "react"
 
 const useAdmin = email => {
     const [isAdmin, setIsAdmin] = useState(false);
-    const [isloading, setisLoading] = useState(true)
+    const [isloading, setIsLoading] = useState(true)
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/users/admin/${email}`)
+            fetch(`https://assingment-12-server.vercel.app/users/admin/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     setIsAdmin(data.isAdmin)
-                    setisLoading(false)
+                    setIsLoading(false)
                 })
         }
     }, [email])

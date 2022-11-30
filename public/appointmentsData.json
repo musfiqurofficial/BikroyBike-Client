@@ -4,25 +4,14 @@
         "model_name": "GSX-R150",
         "model_year": "2022",
         "brand_id": "101",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/black629dc8d562b15.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yellow629dc8d58ff1c.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/blue629dc8eaabf48.webp"
-        },
-        "seller": {
-            "seller_name": "Rahim Khan",
-            "verified_seller": true,
-            "Adverting": true,
-            "phone_number": "+880 1948574505"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/black629dc8d562b15.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yellow629dc8d58ff1c.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/blue629dc8eaabf48.webp",
+        "seller_name": "Rahim Khan",
+        "verified_seller": true,
+        "phone_number": "+880 1948574505",
         "Post_date": "20 Nov 2022",
-        "Post_time": "08.00 PM",
-        "address": {
-            "city": "Savae",
-            "zip_code": "1200",
-            "state": "Dhaka",
-            "country": "Bangladesh"
-        },
+        "address": "Savar, Dhaka-1200, Bangladesh",
         "km": "400 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -35,25 +24,14 @@
         "model_name": "Gixxer SF FI ABS",
         "model_year": "2021",
         "brand_id": "101",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-suzuki-gixxer-sf-special-edition60d709a44f510.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-gi16280c426df96e.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-suzuki-gixxer-sf-black60d709a40d6f3.webp"
-        },
-        "seller": {
-            "seller_name": "Masraf Hasan",
-            "verified_seller": true,
-            "Adverting": false,
-            "phone_number": "+880 1348574464"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-suzuki-gixxer-sf-special-edition60d709a44f510.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-gi16280c426df96e.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-suzuki-gixxer-sf-black60d709a40d6f3.webp",
+        "seller_name": "Masraf Hasan",
+        "verified_seller": true,
+        "phone_number": "+880 1348574464",
         "Post_date": "20 Nov 2022",
-        "Post_time": "09.00 PM",
-        "address": {
-            "city": "Nothullabad",
-            "zip_code": "8400",
-            "state": "Barisal",
-            "country": "Bangladesh"
-        },
+        "address": "Nothullabad, Bangladesh", 
         "km": "800 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -66,25 +44,14 @@
         "model_name": "Gixxer Double Disc Edition",
         "model_year": "2020",
         "brand_id": "101",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-side-view60d70a4b5339b.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-blue60d70a4b3b1a9.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-black60d70a4b24ab5.webp"
-        },
-        "seller": {
-            "seller_name": "Hasan Sikder",
-            "verified_seller": false,
-            "Adverting": true,
-            "phone_number": "+880 178548712"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-side-view60d70a4b5339b.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-blue60d70a4b3b1a9.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-black60d70a4b24ab5.webp",
+        "seller_name": "Hasan Sikder",
+        "verified_seller": false,
+        "phone_number": "+880 178548712",
         "Post_date": "22 Nov 2022",
-        "Post_time": "10.00 AM",
-        "address": {
-            "city": "Gazipur",
-            "zip_code": "1300",
-            "state": "Dhaka",
-            "country": "Bangladesh"
-        },
+        "address": "Gazipur, Bangladesh",
         "km": "2200 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -97,25 +64,14 @@
         "model_name": "Gixxer Single Disc",
         "model_year": "2021",
         "brand_id": "101",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-side-view60d70a4b5339b.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-blue60d70a4b3b1a9.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-black60d70a4b24ab5.webp"
-        },
-        "seller": {
-            "seller_name": "Musfiqur Rahman",
-            "verified_seller": true,
-            "Adverting": true,
-            "phone_number": "+880 1985658741"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-side-view60d70a4b5339b.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-blue60d70a4b3b1a9.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-double-disc-edition-black60d70a4b24ab5.webp",
+        "seller_name": "Musfiqur Rahman",
+        "verified_seller": true,
+        "phone_number": "+880 1985658741",
         "Post_date": "24 Oct 2022",
-        "Post_time": "12.00 AM",
-        "address": {
-            "city": "Ashulia",
-            "zip_code": "1900",
-            "state": "Dhaka",
-            "country": "Bangladesh"
-        },
+        "address": "Ashulia, Bangladesh",       
         "km": "3200 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -128,25 +84,14 @@
         "model_name": "CB150R Exmotion",
         "model_year": "2022",
         "brand_id": "102",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-black60d8325d1ac40.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-red60d8325d33f35.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-white60d8325d4be0e.webp"
-        },
-        "seller": {
-            "seller_name": "Rahat Ali",
-            "verified_seller": true,
-            "Adverting": false,
-            "phone_number": "+880 1765498761"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-black60d8325d1ac40.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-red60d8325d33f35.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-white60d8325d4be0e.webp",
+        "seller_name": "Rahat Ali",
+        "verified_seller": true,
+        "phone_number": "+880 1765498761",
         "Post_date": "23 Jun 2022",
-        "Post_time": "02.30 AM",
-        "address": {
-            "city": "Khulna",
-            "zip_code": "9600",
-            "state": "Khulna",
-            "country": "Bangladesh"
-        },
+        "address": "Khulna, Bangladesh",       
         "km": "200 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -159,25 +104,14 @@
         "model_name": "Honda CBR 150R",
         "model_year": "2022",
         "brand_id": "102",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-matt-red-and-black60d85857c785a.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-black60d85857ae44e.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-red-and-white60d85857e0342.webp"
-        },
-        "seller": {
-            "seller_name": "Harun or Roshid",
-            "verified_seller": true,
-            "Adverting": false,
-            "phone_number": "+880 1846372055"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-matt-red-and-black60d85857c785a.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-black60d85857ae44e.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr-150r-red-and-white60d85857e0342.webp",
+        "seller_name": "Harun or Roshid",
+        "verified_seller": true,
+        "phone_number": "+880 1846372055",
         "Post_date": "23 Nov 2022",
-        "Post_time": "02.50 AM",
-        "address": {
-            "city": "Jhalokathi",
-            "zip_code": "8400",
-            "state": "Barisal",
-            "country": "Bangladesh"
-        },
+        "address": "Jhalokathi, Bangladesh", 
         "km": "2100 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -190,25 +124,14 @@
         "model_name": "X-Blade Double Disk ABS",
         "model_year": "2021",
         "brand_id": "102",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619587340_12_864151.jpeg",
-            "product_img2": "",
-            "product_img3": ""
-        },
-        "seller": {
-            "seller_name": "Imran Islam",
-            "verified_seller": false,
-            "Adverting": false,
-            "phone_number": "+880 1877320983"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619587340_12_864151.jpeg",
+        "product_img2": "",
+        "product_img3": "",
+        "seller_name": "Imran Islam",
+        "verified_seller": false,
+        "phone_number": "+880 1877320983",
         "Post_date": "27 Nov 2022",
-        "Post_time": "07.50 PM",
-        "address": {
-            "city": "Sylet",
-            "zip_code": "3400",
-            "state": "Sylet",
-            "country": "Bangladesh"
-        },
+        "address": "Sylet, Bangladesh", 
         "km": "7000 KM",
         "cc": "160 CC",
         "category": "Motor Cycle",
@@ -221,25 +144,14 @@
         "model_name": "CB Hornet 160R",
         "model_year": "2020",
         "brand_id": "102",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1613631320_12_107068.jpeg",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb-hornet-160r-abs-athletic-blue-metallic60d830246db3c.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb-hornet-160r-abs-sports-red60d8302487e7a.webp"
-        },
-        "seller": {
-            "seller_name": "Rj Kibria",
-            "verified_seller": false,
-            "Adverting": false,
-            "phone_number": "+880 1857487745"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1613631320_12_107068.jpeg",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb-hornet-160r-abs-athletic-blue-metallic60d830246db3c.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb-hornet-160r-abs-sports-red60d8302487e7a.webp",
+        "seller_name": "Rj Kibria",
+        "verified_seller": false,
+        "phone_number": "+880 1857487745",
         "Post_date": "21 Nov 2022",
-        "Post_time": "10.50 PM",
-        "address": {
-            "city": "Rajshahi",
-            "zip_code": "5400",
-            "state": "Rajshahi",
-            "country": "Bangladesh"
-        },
+        "address": "Rajshahi, Bangladesh", 
         "km": "5500 KM",
         "cc": "160 CC",
         "category": "Motor Cycle",
@@ -252,25 +164,14 @@
         "model_name": "R15M",
         "model_year": "2022",
         "brand_id": "103",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp"
-        },
-        "seller": {
-            "seller_name": "Jakariya Jomaddar",
-            "verified_seller": true,
-            "Adverting": true,
-            "phone_number": "+880 1357485845"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-m-metallic-grey61a5a6d0df4d1.webp",
+        "seller_name": "Jakariya Jomaddar",
+        "verified_seller": true,
+        "phone_number": "+880 1357485845",
         "Post_date": "26 Nov 2022",
-        "Post_time": "12.22 PM",
-        "address": {
-            "city": "Rajapur",
-            "zip_code": "8400",
-            "state": "Barisal",
-            "country": "Bangladesh"
-        },
+        "address": "Rajapur, Bangladesh", 
         "km": "500 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -283,25 +184,14 @@
         "model_name": "MT15",
         "model_year": "2022",
         "brand_id": "103",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-dark-matte-blue62e0fc6edc1d4.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-metallic-black62e0fc6ed4447.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-dark-matte-blue62e0fc6edc1d4.webp"
-        },
-        "seller": {
-            "seller_name": "Fahim Rahman",
-            "verified_seller": true,
-            "Adverting": false,
-            "phone_number": "+880 134578741"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-dark-matte-blue62e0fc6edc1d4.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-metallic-black62e0fc6ed4447.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-mt-15-dark-matte-blue62e0fc6edc1d4.webp",
+        "seller_name": "Fahim Rahman",
+        "verified_seller": true,
+        "phone_number": "+880 134578741",
         "Post_date": "26 Nov 2022",
-        "Post_time": "02.22 PM",
-        "address": {
-            "city": "Kashipur",
-            "zip_code": "8200",
-            "state": "Barisal",
-            "country": "Bangladesh"
-        },
+        "address": "Kashipur, Bangladesh", 
         "km": "1500 KM",
         "cc": "150 CC",
         "category": "Motor Cycle",
@@ -314,25 +204,14 @@
         "model_name": "Apache RTR 160 4V ABS",
         "model_year": "2022",
         "brand_id": "104",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1614232247_12_825833.jpeg",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-tvs-apache-rtr-160-4v-black60d815f4ceca6.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-tvs-apache-rtr-160-4v-black60d815f4ceca6.webp"
-        },
-        "seller": {
-            "seller_name": "Kamrul Hasan",
-            "verified_seller": false,
-            "Adverting": false,
-            "phone_number": "+880 134575569"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1614232247_12_825833.jpeg",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-tvs-apache-rtr-160-4v-black60d815f4ceca6.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-tvs-apache-rtr-160-4v-black60d815f4ceca6.webp",
+        "seller_name": "Kamrul Hasan",
+        "verified_seller": false,
+        "phone_number": "+880 134575569",
         "Post_date": "20 Oct 2022",
-        "Post_time": "05.22 PM",
-        "address": {
-            "city": "Guthia",
-            "zip_code": "8200",
-            "state": "Barisal",
-            "country": "Bangladesh"
-        },
+        "address": "Guthia, Bangladesh", 
         "km": "2500 KM",
         "cc": "160 CC",
         "category": "Motor Cycle",
@@ -345,25 +224,14 @@
         "model_name": "Raider 125",
         "model_year": "2022",
         "brand_id": "104",
-        "product_img": {
-            "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp",
-            "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp",
-            "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp"
-        },
-        "seller": {
-            "seller_name": "Faruk Munshi",
-            "verified_seller": false,
-            "Adverting": false,
-            "phone_number": "+880 174588747"
-        },
+        "product_img1": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp",
+        "product_img2": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp",
+        "product_img3": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/tvs-raider-12561a5a689519ac.webp",
+        "seller_name": "Faruk Munshi",
+        "verified_seller": false,
+        "phone_number": "+880 174588747",
         "Post_date": "20 Aug 2022",
-        "Post_time": "04.22 PM",
-        "address": {
-            "city": "Ponchogor",
-            "zip_code": "3200",
-            "state": "Barisal",
-            "country": "Rongpur"
-        },
+        "address": "Ponchogor, Bangladesh", 
         "km": "500 KM",
         "cc": "125 CC",
         "category": "Motor Cycle",

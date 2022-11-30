@@ -15,7 +15,7 @@ const AllBuyer = () => {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:5000/allseller?role=Buyer')
+        axios.get('https://assingment-12-server.vercel.app/allseller?role=Buyer')
             .then(data => {
                 setLoading(true)
                 const byr = data.data;
@@ -24,7 +24,7 @@ const AllBuyer = () => {
     }, [])
 
     const handleDeleteUser = buyer => {
-        fetch(`http://localhost:5000/user/${buyer._id}`, {
+        fetch(`https://assingment-12-server.vercel.app/user/${buyer._id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

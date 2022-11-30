@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react"
 
 const useSeller = email => {
-    const [isSellar, setIsSellar] = useState(false);
-    const [isloading, setisLoading] = useState(true)
+    const [isSeller, setIsSeller] = useState(false);
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/user/sellar/${email}`)
+            fetch(`https://assingment-12-server.vercel.app/user/sellar/${email}`)
                 .then(res => res.json())
                 .then(data => {
-                    setIsSellar(data.isSellar)
-                    setisLoading(false)
+                    setIsSeller(data.isSellar)
+                    setIsLoading(false)
                 })
         }
     }, [email])
-    return [isSellar, isloading]
+    return [isSeller, isLoading]
 }
 
 

@@ -37,12 +37,12 @@ export const router = createBrowserRouter([
             {
                 path: '/product/:name',
                 element: <Products></Products>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.name}`)
+                loader: ({ params }) => fetch(`https://assingment-12-server.vercel.app/product/${params.name}`)
             },
             {
                 path: '/product/detail/:id',
                 element: <ProductDetail></ProductDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/detail/${params.id}`)
+                loader: ({ params }) => fetch(`https://assingment-12-server.vercel.app/product/detail/${params.id}`)
             },
             {
                 path: '/about',
@@ -86,7 +86,7 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:paymentId',
                 element: <Payment></Payment>,
-                loader: ({ params }) => fetch(`http://localhost:5000/paybooking/${params.paymentId}`)
+                loader: ({ params }) => fetch(`https://assingment-12-server.vercel.app/paybooking/${params.paymentId}`)
             },
             {
                 path: '/dashboard/myproducts',
