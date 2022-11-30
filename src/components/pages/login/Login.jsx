@@ -52,7 +52,6 @@ const Login = () => {
                             <input type="password" {...register("password", {
                                 required: 'Wrong Password!',
                                 minLength: { value: 6, message: 'Password must be 6 characters long!' },
-                                pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z].*[a-z])/, message: 'Password must be strong!' }
                             })} placeholder="*****" className="w-full px-3 py-2 border rounded-md border-blue-600 bg-base-100 text-gray-900" />
                             {errors.password && <p className='text-red-600 pt-2'>{errors.password.message}</p>}
                             <Link>Forgot Password</Link>

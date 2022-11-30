@@ -1,12 +1,14 @@
-import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react'
-import { toast } from 'react-hot-toast';
-import DeleteConfirmModal from './DeleteConfirmModal';
 import axios from 'axios'
+import Loading from '../components/common/loading/Loading';
+import toast, { Toaster } from 'react-hot-toast';
+import DeleteConfirmModal from './DeleteConfirmModel';
 const AllBuyer = () => {
 
     const [deletingBuyer, setDeletingBuyer] = useState(null);
     const [buyers, setBuyers] = useState([]);
+    const [loading, setLoading] = useState(false);
+
 
     const closeModal = () => {
         setDeletingBuyer(null);
@@ -15,31 +17,27 @@ const AllBuyer = () => {
     useEffect(() => {
         axios.get('http://localhost:5000/allseller?role=Buyer')
             .then(data => {
+                setLoading(true)
                 const byr = data.data;
                 setBuyers(byr)
             })
     }, [])
 
-
-
-
-
     const handleDeleteUser = buyer => {
         fetch(`http://localhost:5000/user/${buyer._id}`, {
-            method: 'DELETE',
-            
+            method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    toast.success(` ${buyer.displayName} deleted successfully`)
+                    toast.success(`${buyer.displayName} deleted successfully`)
                 }
             })
     };
 
-
-
-
+    if (loading === false) {
+        return <Loading></Loading>
+    }
 
     return (
         <div className='mt-10 w-full'>
@@ -86,6 +84,7 @@ const AllBuyer = () => {
                 >
 
                 </DeleteConfirmModal>}
+            <Toaster></Toaster>
         </div>
     )
 }

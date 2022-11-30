@@ -1,63 +1,109 @@
-import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import { useQuery } from '@tanstack/react-query'
+import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
+import Loading from '../components/common/loading/Loading';
+import DeleteConfirmModal from './DeleteConfirmModel';
 
-const AllUsers = () => {
-    const { data: users = [], refetch } = useQuery({
+const AllUser = () => {
+    const [deletingUser, setDeletingUser] = useState(null);
+
+    const closeModal = () => {
+        setDeletingUser(null);
+    };
+
+
+
+    const { data: users = [], refetch, isLoading } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allUsers');
+            const res = await fetch('http://localhost:5000/users')
             const data = await res.json();
             return data;
         }
-    })
+    });
 
-    const handleUpdate = (id) => {
+
+
+
+    const handelMakeAdmin = id => {
         fetch(`http://localhost:5000/users/admin/${id}`, {
-            method: 'PUT',
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
+            method: 'PUT'
         })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    toast.success('Successfully admin created!')
+                    toast.success('Make Admin Successful.');
                     refetch();
                 }
             })
-    }
+    };
 
+
+    const handleDeleteUser = user => {
+        fetch(`http://localhost:5000/user/${user._id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`${user.displayName} deleted successfully`)
+                }
+            })
+    };
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
-        <div>
-            <div className="w-11/12 mx-auto my-8 overflow-x-auto">
-                <h1 className="text-3xl font-bold mb-5">All Users Appointment</h1>
-                <table className="table table-zebra w-full">
+        <div className='mt-10 w-full'>
+            <h1 className='text-3xl font-semibold mb-5'>All Users</h1>
+            <div className='overflow-x-auto'>
+                <table className="table w-full ">
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th>User Name</th>
+                            <th>User Email</th>
                             <th>Admin</th>
-                            <th>Delete</th>
+                            <th>Designation</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+
                         {
-                            users?.map((user, idx) => <tr key={user._id}>
-                                <th>{idx + 1}</th>
-                                <td>{user.name}</td>
+                            users.map((user, i) => <tr key={user._id}>
+                                <th>{i + 1}</th>
+                                <td>{user.displayName}</td>
                                 <td>{user.email}</td>
-                                <td>{user?.role !== 'admin' && <button onClick={() => handleUpdate(user._id)} className='btn btn-secondary text-white'>Make Admin</button>}</td>
-                                <td><button className='py-2 text-white px-6 rounded-md bg-red-600 hover:bg-red-900'>Delete</button></td>
+                                <td>{user?.role !== 'admin' && <button onClick={() => handelMakeAdmin(user._id)} className='btn btn-xs btn-primary'>Make Admin</button>}</td>
+                                <td>{user?.designation}</td>
+                                <td>
+                                    <label onClick={() => setDeletingUser(user)} htmlFor="confirmation-modal" className="btn btn-sm btn-error">Delete</label>
+                                </td>
                             </tr>)
                         }
                     </tbody>
                 </table>
             </div>
+            {
+                deletingUser &&
+
+                <DeleteConfirmModal
+                    title={`Are you sure you want to delete?`}
+                    message={`If you delete ${deletingUser.displayName}. It cannot be undone.`}
+                    successAction={handleDeleteUser}
+                    successButtonName="Delete"
+                    modalData={deletingUser}
+                    closeModal={closeModal}
+
+                >
+                </DeleteConfirmModal>}
             <Toaster></Toaster>
         </div>
-    );
-};
+    )
 
-export default AllUsers;
+}
+
+export default AllUser

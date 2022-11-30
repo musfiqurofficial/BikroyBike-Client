@@ -1,11 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-hot-toast';
-import ConfirmationModal from './ConfirmationModal';
-import { useContext } from 'react';
 import { AuthContext } from '../context/AuthProvider';
-
+import ConfirmationModal from './ConfirmationModal';
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
     const [deletingOrder, setDeletingOrder] = useState(null);
@@ -43,12 +41,12 @@ const MyOrders = () => {
 
     return (
         <div className='mt-10 w-full'>
-            <h1 className='text-3xl font-semibold mb-5'>My Orders</h1>
-            <div className='overflow-x-auto'>
-                <table className="table w-full">
+            <div className="w-11/12 mx-auto my-8 overflow-x-auto">
+                <h1 className="text-3xl font-bold mb-5">All Users Appointment</h1>
+                <table className="table table-zebra w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>No</th>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Price</th>
@@ -60,38 +58,23 @@ const MyOrders = () => {
                     <tbody>
 
                         {
-                            bookings.map((booking, i) => <tr>
-
-
-                                <th>{i + 1}</th>
+                            bookings.map((booking, idx) => <tr>
+                                <th>{idx + 1}</th>
                                 <th>{booking?.image ?
                                     <img className='w-20 rounded-full' src={booking.image} alt="" />
                                     :
                                     <p>no photo</p>
                                 }</th>
-                                <th>{
-                                    booking.customer_name
-                                }</th>
-                                <th>{
-                                    booking.email
-                                }</th>
-                                <th>{
-                                    booking.phone
-                                }</th>
-
-                                <th>{
-                                    booking.price && !booking.paid &&
-                                    <Link to={`/dashboard/payment/${booking._id}`}> <button className='btn bg-indigo-500 text-white'>Pay</button></Link>
-
-                                }
+                                <th>{booking.customer_name}</th>
+                                <th>{booking.price}</th>
+                                <th>{booking.price && !booking.paid &&
+                                    <Link to={`/dashboard/payment/${booking._id}`}> <button className='btn bg-indigo-500 text-white'>Pay</button></Link>}
                                     {
                                         booking.price && booking.paid &&
                                         <span className=' '>Paid</span>
-
                                     }
                                 </th>
                                 <th>{booking.transactionId}</th>
-
                                 <th>
                                     <label onClick={() => setDeletingOrder(booking)} htmlFor="confirmation-modal" className="btn btn-sm btn-error">Delete</label>
                                 </th>
@@ -110,9 +93,9 @@ const MyOrders = () => {
                     successButtonName="Delete"
                     modalData={deletingOrder}
                     closeModal={closeModal}
-
                 ></ConfirmationModal>
             }
+            <Toaster></Toaster>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import { useEffect, useState } from 'react'
-import { toast } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 const CheckoutForm = ({ data }) => {
 
     const stripe = useStripe();
@@ -21,7 +21,6 @@ const CheckoutForm = ({ data }) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                authorization: `bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify({ price }),
         })
@@ -32,12 +31,6 @@ const CheckoutForm = ({ data }) => {
 
             });
     }, [price]);
-
-
-
-
-
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (!stripe || !elements) {
@@ -51,7 +44,6 @@ const CheckoutForm = ({ data }) => {
             type: 'card',
             card,
         });
-
 
 
         if (error) {
@@ -96,7 +88,6 @@ const CheckoutForm = ({ data }) => {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
-                    authorization: `bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(payment)
             })
@@ -112,17 +103,7 @@ const CheckoutForm = ({ data }) => {
         }
         setProcessing(false);
 
-
     };
-
-
-
-
-
-
-
-
-
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -155,8 +136,9 @@ const CheckoutForm = ({ data }) => {
                     <p>Your transactionId: <span className='font-bold'>{transactionId}</span></p>
                 </div>
             }
+            <Toaster></Toaster>
         </>
     )
 }
 
-export default CheckoutForm
+export default CheckoutForm;

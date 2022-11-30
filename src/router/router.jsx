@@ -8,20 +8,17 @@ import Register from "../components/pages/login/Register";
 import Login from "../components/pages/login/Login";
 import Products from "../components/pages/home/product/Products";
 import ProductDetail from "../components/pages/home/product/ProductDetail";
-import DashboardLayout from "../dashboard/DashboardLayout";
-import PrivateRoute from "../private/PrivateRoute";
-import MyOrders from "../dashboard/MyOrders";
-import SellerPrivet from "../private/SellerPrivet";
-import MyProducts from "../dashboard/MyProducts";
-import AddProduct from "../dashboard/AddProduct";
-import AdminRoute from "../private/AdminRoute";
-import AllSaller from "../dashboard/AllSaller";
-import AllBuyer from "../dashboard/AllBuyer";
-import AllUser from "../dashboard/AllUser";
-import Payment from "../dashboard/Payment";
 import Orders from "../components/pages/myOrder/Orders";
-import AddDoctor from "../dashboard/AddDoctor";
 import ErrorPage from "../error/ErrorPage";
+import PrivateRoute from "../private/PrivateRoute";
+import DashboardLayout from "../dashboard/DashboardLayout";
+import MyOrders from "../dashboard/MyOrder";
+import Payment from "../dashboard/payment/Payment";
+import MyProducts from "../dashboard/MyProduct";
+import AddProduct from "../dashboard/AddProduct";
+import AllSaller from "../dashboard/AllSeller";
+import AllBuyer from "../dashboard/AllBuyer";
+import AllUser from "../dashboard/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -93,29 +90,26 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/myproducts',
-                element: <SellerPrivet><MyProducts></MyProducts></SellerPrivet>
+                element: <MyProducts></MyProducts>
             },
             {
                 path: '/dashboard/addproduct',
                 element: <AddProduct></AddProduct>
             },
             {
-                path: '/dashboard/addDoctors',
-                element: <AddDoctor></AddDoctor>
-            },
-            {
                 path: '/dashboard/allsaller',
-                element: <AdminRoute><AllSaller></AllSaller></AdminRoute>
+                element: <AllSaller></AllSaller>
             },
             {
                 path: '/dashboard/allbuyer',
-                element: <AdminRoute><AllBuyer></AllBuyer></AdminRoute>
+                element: <AllBuyer></AllBuyer>
             },
             {
                 path: '/dashboard/alluser',
-                element: <AdminRoute><AllUser></AllUser></AdminRoute>
+                element: <AllUser></AllUser>
             },
         ]
     }
+
 
 ])

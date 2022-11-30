@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react'
-import { toast } from 'react-hot-toast';
-import DeleteConfirmModal from './DeleteConfirmModal';
+import toast, { Toaster } from 'react-hot-toast';
 import { GoVerified } from 'react-icons/go'
+import Loading from '../components/common/loading/Loading';
+import DeleteConfirmModal from './DeleteConfirmModel';
 
 const AllSaller = () => {
+
     const [deletingSeller, setDeletingSeller] = useState(null);
 
     const closeModal = () => {
@@ -13,7 +15,7 @@ const AllSaller = () => {
 
 
 
-    const { data: sellers = [], refetch } = useQuery({
+    const { data: sellers = [], refetch, isLoading } = useQuery({
         queryKey: ['sellers'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/allseller?role=Seller')
@@ -28,7 +30,6 @@ const AllSaller = () => {
     const handelMakeVerifide = id => {
         fetch(`http://localhost:5000/allseller/${id}`, {
             method: 'PUT',
-
         })
             .then(res => res.json())
             .then(data => {
@@ -43,21 +44,20 @@ const AllSaller = () => {
     const handleDeleteUser = seller => {
         fetch(`http://localhost:5000/user/${seller._id}`, {
             method: 'DELETE',
-            headers: {
-                authorization: `bearer ${localStorage.getItem('token')}`
-            }
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
                     refetch();
-                    toast.success(` ${seller.displayName} deleted successfully`)
+                    toast.success(`${seller.displayName} deleted successfully`)
                 }
             })
     };
 
 
-
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='mt-10 w-full'>
             <h1 className='text-3xl font-semibold mb-5'>All Users</h1>
@@ -108,6 +108,7 @@ const AllSaller = () => {
                 >
 
                 </DeleteConfirmModal>}
+            <Toaster></Toaster>
         </div>
     )
 }

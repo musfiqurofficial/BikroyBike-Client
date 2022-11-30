@@ -5,6 +5,7 @@ import app from '../firebase/firebase.config';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
@@ -14,6 +15,9 @@ const gitHubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    // const [render, setRender] = useState(false)
+
+    console.log(user, loading);
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -41,19 +45,45 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, currentUser => {
+    //         console.log('User Observing');
+    //         setUser(currentUser);
+    //         setLoading(false)
+    //     });
+    //     return () => unsubscribe();
+    // }, [])
+
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('User Observing');
-            setUser(currentUser);
-            setLoading(false)
-        });
-        return () => unsubscribe();
+
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+            console.log(currentUser);
+            if (currentUser) {
+                fetch(`http://localhost:5000/user?email=${currentUser.email}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        data.uid = currentUser.uid
+                        setUser(data)
+
+                        setLoading(false);
+                    })
+            }
+            else {
+                // setUser(null)
+                setLoading(false);
+            }
+        })
+        return () => unSubscribe();
     }, [])
+
 
 
     const authInfo = {
         user,
         loading,
+        setUser,
+        setLoading,
         createUser,
         login,
         loginWithGoogle,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const useSellar = email => {
+const useSeller = email => {
     const [isSellar, setIsSellar] = useState(false);
     const [isloading, setisLoading] = useState(true)
 
@@ -18,4 +18,4 @@ const useSellar = email => {
 }
 
 
-export default useSellar;
+export default useSeller;

@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react'
-import { useContext } from 'react';
-import { toast } from 'react-hot-toast';
+import React, { useContext, useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 import Loading from '../components/common/loading/Loading';
 import { AuthContext } from '../context/AuthProvider';
 import ConfirmationModal from './ConfirmationModal';
+
 
 const MyProducts = () => {
     const { user } = useContext(AuthContext)
@@ -17,27 +17,20 @@ const MyProducts = () => {
     const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/myproducts?email=${user?.email}`, {
-                headers: {
-                    authorization: `bearer ${localStorage.getItem('token')}`
-                }
-            });
+            const res = await fetch(`http://localhost:5000/myproducts?email=${user?.email}`)
             const data = await res.json();
             return data;
         }
     });
     const handleDeleteProduct = product => {
         fetch(`http://localhost:5000/products/${product._id}`, {
-            method: 'DELETE',
-            headers: {
-                authorization: `bearer ${localStorage.getItem('token')}`
-            }
+            method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
                     refetch();
-                    toast.success(` ${product.phoneName} deleted successfully`)
+                    toast.success(`${product.phoneName} deleted successfully`)
                 }
             })
     }
@@ -97,9 +90,9 @@ const MyProducts = () => {
                 >
                 </ConfirmationModal>
             }
+            <Toaster></Toaster>
         </div>
     )
 }
 
 export default MyProducts
-

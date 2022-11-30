@@ -2,8 +2,11 @@ import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import { useLoaderData, useNavigation } from 'react-router-dom';
+import Loading from '../../components/common/loading/Loading';
 import CheckoutForm from './CheckoutForm';
-import Loading from '../components/common/loading/Loading';
+
+
+
 
 const stripePromise = loadStripe('pk_test_51M6U64G7PkQ5daFNJ5jIwvzjgdLP0ANXmUoTnVYgQHAGCqCwm2cIsy62dVJ8QbCmVLmThdXNGRVYedVJNfK7p1JN009bkUa0eS');
 
