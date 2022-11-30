@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/pages/home/Home";
-import About from "../components/pages/about/About";
+import About from "../components/pages/about/Blog";
 import LoginForm from "../components/pages/login/LoginForm";
 import Main from "../root/Main";
 import Contact from "../components/pages/contact/Contact";
@@ -19,6 +19,7 @@ import AddProduct from "../dashboard/AddProduct";
 import AllSaller from "../dashboard/AllSeller";
 import AllBuyer from "../dashboard/AllBuyer";
 import AllUser from "../dashboard/AllUsers";
+import Blog from "../components/pages/about/Blog";
 
 export const router = createBrowserRouter([
     {
@@ -45,8 +46,8 @@ export const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://assingment-12-server.vercel.app/product/detail/${params.id}`)
             },
             {
-                path: '/about',
-                element: <About></About>
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/orders',

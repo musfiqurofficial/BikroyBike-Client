@@ -29,9 +29,9 @@ const Header = () => {
         <li><NavLink to='/home' style={({ isActive }) =>
             isActive ? activeStyle : undefined
         } >Home</NavLink></li>
-        <li><NavLink to='/about' style={({ isActive }) =>
+        <li><NavLink to='/blog' style={({ isActive }) =>
             isActive ? activeStyle : undefined
-        }>About</NavLink></li>
+        }>Blog</NavLink></li>
         <li><NavLink to='/orders' style={({ isActive }) =>
             isActive ? activeStyle : undefined
         }>Orders</NavLink></li>
