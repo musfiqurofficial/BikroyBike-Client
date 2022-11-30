@@ -69,7 +69,7 @@ const Orders = () => {
                                 <th>{booking.customer_name}</th>
                                 <th>{booking.price}</th>
                                 <th>{booking.price && !booking.paid &&
-                                    <Link to={`/dashboard/payment/${booking._id}`}> <button className='btn bg-indigo-500 text-white'>Pay</button></Link>}
+                                    <Link to={`/dashboard/payment/${booking._id}`}> <button className='btn bg-primary text-white'>Pay</button></Link>}
                                     {
                                         booking.price && booking.paid &&
                                         <span className=' '>Paid</span>

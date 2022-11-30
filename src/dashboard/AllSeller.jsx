@@ -81,7 +81,7 @@ const AllSaller = () => {
                                 <td>{seller.displayName}</td>
                                 <td>{seller.email}</td>
                                 <td>{seller?.verified !== true ?
-                                    <button onClick={() => handelMakeVerifide(seller._id)} className='btn btn-xs bg-indigo-500 text-white '>Make Verify</button>
+                                    <button onClick={() => handelMakeVerifide(seller._id)} className='btn btn-xs bg-primary text-white '>Make Verify</button>
                                     :
                                     <span className='text-blue-500'><GoVerified></GoVerified></span>
                                 }</td>

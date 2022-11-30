@@ -76,122 +76,122 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='w-96 p-7'>
-            <h2 className="text-4xl">Add A Product</h2>
+        <div className='my-10'>
+            <h2 className="text-4xl mb-5">Add A Product</h2>
             <form onSubmit={handleSubmit(handleAddProduct)}>
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Seller Name</span></label>
+                    <label className="label"> <span className="label-text text-black">Seller Name</span></label>
                     <input
                         defaultValue={user?.displayName} readOnly
                         type="text" {...register("seller_name", {
                             required: "Name is Required"
-                        })} className="input input-bordered w-full " />
+                        })} className="input border-gray-400 text-black input-bordered w-full " />
                 </div>
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Email</span></label>
+                    <label className="label"> <span className="label-text text-black">Email</span></label>
                     <input
                         defaultValue={user?.email} readOnly
                         type="email" {...register("email", {
                             required: true
-                        })} className="input input-bordered w-full " />
+                        })} className="input border-gray-400 text-black input-bordered w-full " />
                 </div>
                 {/* model name  */}
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Model Name</span></label>
+                    <label className="label"> <span className="label-text text-black">Model Name</span></label>
                     <input
                         type="text" {...register("model_name", {
                             required: "Phone Name is Required"
-                        })} className="input input-bordered w-full " />
+                        })} className="input border-gray-400 text-black input-bordered w-full " />
                     {errors.model_name && <p className='text-red-500'>{errors.model_name.message}</p>}
 
                 </div>
                 {/* model year */}
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Model Year</span></label>
+                    <label className="label"> <span className="label-text text-black">Model Year</span></label>
                     <input
                         type="text" {...register("model_year", {
                             required: "Phone Name is Required"
-                        })} className="input input-bordered w-full " />
+                        })} className="input border-gray-400 text-black input-bordered w-full " />
                     {errors.model_name && <p className='text-red-500'>{errors.model_name.message}</p>}
 
                 </div>
                 <div className='flex gap-5'>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Price</span></label>
+                        <label className="label"> <span className="label-text text-black">Price</span></label>
                         <input
                             type="text" {...register("price", {
                                 required: "Resal Price is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.price && <p className='text-red-500'>{errors.price.message}</p>}
 
                     </div>
                 </div>
                 <div className='flex gap-5'>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Address</span></label>
+                        <label className="label"> <span className="label-text text-black">Address</span></label>
                         <input
                             type="text" {...register("address", {
                                 required: "address is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.address && <p className='text-red-500'>{errors.address.message}</p>}
                     </div>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Phone Number</span></label>
+                        <label className="label"> <span className="label-text text-black">Phone Number</span></label>
                         <input
                             type="text" {...register("phone_number", {
                                 required: "Number is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.phone_number && <p className='text-red-500'>{errors.phone_number.message}</p>}
                     </div>
                 </div>
                 <div className='flex gap-5'>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Category</span></label>
+                        <label className="label"> <span className="label-text text-black">Category</span></label>
                         <input
                             type="text" {...register("category", {
                                 required: "category is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.category && <p className='text-red-500'>{errors.category.message}</p>}
                     </div>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">cc</span></label>
+                        <label className="label"> <span className="label-text text-black">cc</span></label>
                         <input
                             type="text" {...register("cc", {
                                 required: "cc is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.cc && <p className='text-red-500'>{errors.cc.message}</p>}
                     </div>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">km</span></label>
+                        <label className="label"> <span className="label-text text-black">km</span></label>
                         <input
                             type="text" {...register("km", {
                                 required: "km is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.km && <p className='text-red-500'>{errors.km.message}</p>}
                     </div>
                 </div>
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Details</span></label>
+                    <label className="label"> <span className="label-text text-black">Details</span></label>
                     <input
                         type="text" {...register("detail", {
                             required: "Details is Required"
-                        })} className="input input-bordered w-full " />
+                        })} className="input border-gray-400 text-black input-bordered w-full " />
                     {errors.detail && <p className='text-red-500'>{errors.detail.message}</p>}
                 </div>
                 <div className='flex gap-5'>
 
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Years/Month of Use</span></label>
+                        <label className="label"> <span className="label-text text-black">Years/Month of Use</span></label>
                         <input
                             type="text" {...register("used_year", {
                                 required: "Use is Required"
-                            })} className="input input-bordered w-full " />
+                            })} className="input border-gray-400 text-black input-bordered w-full " />
                         {errors.used_year && <p className='text-red-500'>{errors.used_year.message}</p>}
                     </div>
                 </div>
                 <div className='flex gap-5'>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text"> Verified Seller</span></label>
+                        <label className="label"> <span className="label-text text-black"> Verified Seller</span></label>
                         <select
                             {...register('verified_seller')}
                             className="select input-bordered w-full ">
@@ -200,7 +200,7 @@ const AddProduct = () => {
                         </select>
                     </div>
                     <div className="form-control w-full ">
-                        <label className="label"> <span className="label-text">Select a Brand Category</span></label>
+                        <label className="label"> <span className="label-text text-black">Select a Brand Category</span></label>
                         <select
                             {...register('brand_name')}
                             className="select input-bordered input-sm input-primary w-full ">
@@ -213,13 +213,13 @@ const AddProduct = () => {
                     </div>
                 </div>
                 <div className="form-control w-full ">
-                    <label className="label"> <span className="label-text">Photo</span></label>
+                    <label className="label"> <span className="label-text text-black">Photo</span></label>
                     <input type="file" {...register("image", {
                         required: "Photo is Required"
-                    })} className="input input-bordered w-full " />
+                    })} className="input border-gray-400 text-black input-bordered w-full " />
                     {errors.image && <p className='text-red-500'>{errors.image.message}</p>}
                 </div>
-                <input className='btn bg-indigo-500 text-white w-full mt-4' value="Add Product" type="submit" />
+                <input className='btn bg-primary text-white w-full mt-4' value="Add Product" type="submit" />
             </form>
         </div>
     );
@@ -361,13 +361,13 @@ export default AddProduct;
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Model Name</span></label>
 //                     <input type="text" {...register("model_name", {
 //                         // required: "Required"
-//                     })} className="input input-sm input-bordered input-primary w-full " />
+//                     })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                 </div>
 //                 <div className="form-control w-full ">
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Model year</span></label>
 //                     <input type="text" {...register("model_year", {
 //                         // required: "Required"
-//                     })} className="input input-sm input-bordered input-primary w-full " />
+//                     })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                 </div>
 //                 <div className="form-control w-full ">
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Product Images</span></label>
@@ -387,15 +387,15 @@ export default AddProduct;
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Seller Name</span></label>
 //                     <input type="text" defaultValue={user?.displayName} {...register("seller_name", {
 //                         // required: "Required"
-//                     })} className="input input-sm input-bordered input-primary w-full " />
+//                     })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Seller Email</span></label>
 //                     <input type="email" defaultValue={user?.email} {...register("seller_email", {
 //                         // required: "Required"
-//                     })} className="input input-sm input-bordered input-primary w-full " readOnly />
+//                     })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " readOnly />
 //                     <label className="label"> <span className="text-black text-lg font-semibold label-text">Seller Phone</span></label>
 //                     <input type="text" defaultValue={user.phone}  {...register("seller_phone", {
 //                         // required: "Required"
-//                     })} className="input input-sm input-bordered input-primary w-full " />
+//                     })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                 </div>
 //                 <div className="flex flex-row justify-around form-control w-full ">
 //                     <div>
@@ -403,14 +403,14 @@ export default AddProduct;
 //                         <input
 //                             type="text" {...register("price", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                     </div>
 //                     <div>
 //                         <label className="label"> <span className="text-black text-lg font-semibold label-text">Resell Price</span></label>
 //                         <input
 //                             type="text" {...register("resell_price", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                     </div>
 //                 </div>
 
@@ -420,24 +420,24 @@ export default AddProduct;
 //                         <input
 //                             type="text" {...register("km", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                         <label className="label"> <span className="text-black text-lg font-semibold label-text">CC</span></label>
 //                         <input
 //                             type="text" {...register("cc", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                     </div>
 //                     <div>
 //                         <label className="label"> <span className="text-black text-lg font-semibold label-text">Category</span></label>
 //                         <input
 //                             type="text" {...register("category", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                         <label className="label"> <span className="text-black text-lg font-semibold label-text">User Year</span></label>
 //                         <input
 //                             type="text" {...register("user_year", {
 //                                 // required: "Required"
-//                             })} className="input input-sm input-bordered input-primary w-full " />
+//                             })} className="input border-gray-400 text-black input-sm input-bordered input-primary w-full " />
 //                     </div>
 //                 </div>
 
